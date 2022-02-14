@@ -11,14 +11,14 @@ import './Sidebar.css'
 const Sidebar = () => {
     return (
         <div>
-           <SidebarRow src='' title="mohin al hoque" ></SidebarRow> 
-           <SidebarRow Icon={LocalHospitalIcon} title="Covid-19 information Center"  ></SidebarRow> 
-           <SidebarRow Icon={EmojiFlagsIcon} title="pages"  ></SidebarRow> 
-           <SidebarRow Icon={PeopleIcon} title="friends"  ></SidebarRow> 
-           <SidebarRow Icon={ChatIcon} title="Messenger"  ></SidebarRow> 
-           <SidebarRow Icon={StorefrontIcon} title="Market Place"  ></SidebarRow> 
-           <SidebarRow Icon={VideoLibraryIcon} title="Videos"  ></SidebarRow> 
-           <SidebarRow Icon={ExpandMoreIcon} title="Market Place"  ></SidebarRow> 
+           <SidebarRow src="https://unsplash.com/photos/DItYlc26zVI" title="mohin al hoque" > </SidebarRow> 
+           <SidebarRow Icon={LocalHospitalIcon} title="Covid-19 information Center"  > </SidebarRow> 
+           <SidebarRow Icon={EmojiFlagsIcon} title="pages"  > </SidebarRow> 
+           <SidebarRow Icon={PeopleIcon} title="friends"  > </SidebarRow> 
+           <SidebarRow Icon={ChatIcon} title="Messenger"  > </SidebarRow> 
+           <SidebarRow Icon={StorefrontIcon} title="Market Place"  > </SidebarRow> 
+           <SidebarRow Icon={VideoLibraryIcon} title="Videos"  > </SidebarRow> 
+           <SidebarRow Icon={ExpandMoreIcon} title="Market Place"  > </SidebarRow> 
         </div>
     );
 };
