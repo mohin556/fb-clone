@@ -7,11 +7,12 @@ import ChatIcon from '@mui/icons-material/Chat';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Image from '../../image/mohin.jpg'
 import './Sidebar.css'
 const Sidebar = () => {
     return (
-        <div>
-           <SidebarRow src="https://unsplash.com/photos/DItYlc26zVI" title="mohin al hoque" > </SidebarRow> 
+        <div className='sidebar' >
+           <SidebarRow src={Image} title="mohin al hoque" > </SidebarRow> 
            <SidebarRow Icon={LocalHospitalIcon} title="Covid-19 information Center"  > </SidebarRow> 
            <SidebarRow Icon={EmojiFlagsIcon} title="pages"  > </SidebarRow> 
            <SidebarRow Icon={PeopleIcon} title="friends"  > </SidebarRow> 

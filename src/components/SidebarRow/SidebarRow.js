@@ -6,8 +6,9 @@ const SidebarRow = ({title,Icon,src}) => {
         <div className='sidebar-row'  >
             {src && <Avatar src={src} />}
             {Icon && <Icon/>}
-        
-           <h4> {title}  </h4> 
+              
+            <h4> {title}  </h4> 
+          
         </div>
     );
 };

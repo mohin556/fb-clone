@@ -1,0 +1,32 @@
+/* .myday > img {
+  height: 200px;
+  width: 300px;
+} */
+.user{
+    margin: 8px;
+    border: 5px solid blue;
+}
+.myday{
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 220px;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+
+}
+.myday:hover{
+    transform: scale(1.07);
+}
+.myday > h4{
+    position: absolute;
+    color: white;
+    bottom: 5px;
+    left: 20px;
+
+}

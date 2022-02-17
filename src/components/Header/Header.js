@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import AddIcon from '@mui/icons-material/Add';
-
+import mohin from '../../image/mohin.jpg';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
@@ -52,7 +52,7 @@ const Header = () => {
              </div>
              <div className="header-right">
                 <div className="header-info">
-                    <Avatar />
+                    <Avatar src={mohin} />
                     <h4>mohinalhoque</h4>
                 </div>
                 <IconButton aria-label="add">
