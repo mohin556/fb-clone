@@ -1,14 +1,21 @@
 import { Avatar } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import './PostOption.css';
 import mohin from '../../image/mohin.jpg';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import VideocamIcon from '@mui/icons-material/Videocam';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 const PostOption = () => {
+  const [input,setInput] = useState("");
+  const [imageURL,setImageURL ] = useState("");
+  
+
     const  handleSubmit= (e) =>{
      e.preventDefault();
-         
+       
+     setImageURL("");
+     setInput("")
     }
     return (
         <div className='post'>
@@ -16,8 +23,14 @@ const PostOption = () => {
               <Avatar src={mohin} />
                
                <form >
-                <input type="text" className='post-input' placeholder={`whats on your mind ?`} />
-                <input type="text" placeholder=' Image URL (Optional)' />
+                <input 
+                value={input}
+                onChange = {(e) =>setInput(e.target.value) }
+                 type="text" className='post-input' placeholder={`whats on your mind ?`} />
+                <input 
+                value={imageURL}
+                onChange= {(e) =>  setImageURL(e.target.value)}
+                type="text" placeholder=' Image URL (Optional)' />
                  <button onClick={handleSubmit} type="submit" > Hide It </button>
                </form>
 
