@@ -13,7 +13,7 @@
 }
 .upload-bottom{
     margin-top: 10px;
-    margin-bottom: 10px;
+   
     padding: 5px 15px;
 }
 .upload-topInfo > p{
@@ -48,4 +48,11 @@
     justify-content: center;
     padding: 5px;
     align-items: center;
+}
+.upload-option > p {
+    margin-left: 10px;
+}
+.upload-option:hover{
+    background-color: #eff2f5;
+    border-radius: 10px;
 }

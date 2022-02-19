@@ -15,7 +15,7 @@ const Story = () => {
            <StoryRel></StoryRel>
             <PostOption></PostOption>
             <Upload profile={profile} user="mohin@alhoque" message='wow its really nice' image={image} ></Upload>
-           
+            <Upload profile={profile} user="mohin@alhoque" message='wow its really nice' image={image} ></Upload>
 
         </div>
     );
