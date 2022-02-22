@@ -1,12 +1,14 @@
 import { Avatar } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './PostOption.css';
 import mohin from '../../image/mohin.jpg';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { userContex } from './../../App';
 const PostOption = () => {
+  const [loggedInUser,setLoggedInUser] = useContext(userContex);
   const [input,setInput] = useState("");
   const [imageURL,setImageURL ] = useState("");
   
@@ -20,13 +22,13 @@ const PostOption = () => {
     return (
         <div className='post'>
              <div className="postOption-top">
-              <Avatar src={mohin} />
+              <Avatar src={loggedInUser.photo} />
                
                <form >
                 <input 
                 value={input}
                 onChange = {(e) =>setInput(e.target.value) }
-                 type="text" className='post-input' placeholder={`whats on your mind ?`} />
+                 type="text" className='post-input' placeholder={`whats on your mind' ${loggedInUser.name } ?  `} />
                 <input 
                 value={imageURL}
                 onChange= {(e) =>  setImageURL(e.target.value)}

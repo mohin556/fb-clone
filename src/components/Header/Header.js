@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import AddIcon from '@mui/icons-material/Add';
 import mohin from '../../image/mohin.jpg';
@@ -18,7 +18,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import logo from '../../image/Group 2.png'
 import { Avatar } from '@mui/material';
+import { userContex } from './../../App';
 const Header = () => {
+
+   const [loggedInUser,setLoggedInUser] = useContext(userContex)
+
+
     return (
         <div className='header' >
              <div className="header-left">
@@ -52,7 +57,7 @@ const Header = () => {
              </div>
              <div className="header-right">
                 <div className="header-info">
-                    <Avatar src={mohin} />
+                    <Avatar src={loggedInUser.photo} />
                     <h4>mohinalhoque</h4>
                 </div>
                 <IconButton aria-label="add">

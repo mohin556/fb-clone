@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SidebarRow from '../SidebarRow/SidebarRow';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import EmojiFlagsIcon from '@mui/icons-material/EmojiFlags';
@@ -9,10 +9,12 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Image from '../../image/mohin.jpg'
 import './Sidebar.css'
+import { userContex } from './../../App';
 const Sidebar = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(userContex);
     return (
         <div className='sidebar' >
-           <SidebarRow src={Image} title="mohin al hoque" > </SidebarRow> 
+           <SidebarRow src={loggedInUser.photo} title={loggedInUser.name} > </SidebarRow> 
            <SidebarRow Icon={LocalHospitalIcon} title="Covid-19 information Center"  > </SidebarRow> 
            <SidebarRow Icon={EmojiFlagsIcon} title="pages"  > </SidebarRow> 
            <SidebarRow Icon={PeopleIcon} title="friends"  > </SidebarRow> 
