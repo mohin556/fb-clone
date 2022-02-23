@@ -7,18 +7,45 @@ import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { userContex } from './../../App';
+import { db } from '../../firebase.config';
+import { collection,addDoc } from 'firebase/firestore';
 const PostOption = () => {
   const [loggedInUser,setLoggedInUser] = useContext(userContex);
   const [input,setInput] = useState("");
   const [imageURL,setImageURL ] = useState("");
+  const addPost = collection(db, "posts");
   
+   
+  const handleSubmit = async (e) =>{
+    e.preventDefault();
+    await addDoc(addPost, { message : input ,
+            user : loggedInUser.name,
+             image : imageURL,
+            
+      
+             profile : loggedInUser.photo,})
 
-    const  handleSubmit= (e) =>{
-     e.preventDefault();
+             setImageURL("");
+             setInput("")
+
+  }
+
+
+
+    // const  handleSubmit= (e) =>{
+    //  e.preventDefault();
+    //      addPost.addDoc({
+    //        message : input ,
+    //        user : loggedInUser.name,
+    //        image : imageURL,
+    //        profile : loggedInUser.photo,
+    //      })
+
+
        
-     setImageURL("");
-     setInput("")
-    }
+    //  setImageURL("");
+    //  setInput("")
+    // }
     return (
         <div className='post'>
              <div className="postOption-top">

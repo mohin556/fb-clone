@@ -1,4 +1,6 @@
-
+import {initializeApp} from 'firebase/app';
+import {} from "@firebase/firestore"
+import { getFirestore } from 'firebase/firestore';
 
 
 
@@ -11,5 +13,9 @@ const firebaseConfig = {
   appId: "1:642975445824:web:8aab8a98eb8df4ba4b00a5"
 };
 
+const app = initializeApp(firebaseConfig);
 
-export default firebaseConfig;
+const db = getFirestore(app);
+
+export {firebaseConfig,db}
+

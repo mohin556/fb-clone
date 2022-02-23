@@ -30,7 +30,8 @@
 }
 .upload-image> img {
     width: 100%;
-    height: 500px;
+    height: 425px;
+    
 }
 .upload-options{
     padding-top: 10px;

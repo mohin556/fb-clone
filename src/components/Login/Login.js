@@ -6,7 +6,8 @@ import './Login.css';
 import facebook from '../../image/facebook.jpg';
 // import firebaseConfig from './../../firebase.config';
 import { userContex } from './../../App';
-import firebaseConfig from '../../firebase.config';
+import { firebaseConfig } from '../../firebase.config';
+
 
 const app = initializeApp(firebaseConfig);
 

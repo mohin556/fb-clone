@@ -59,7 +59,7 @@
     cursor: pointer;
 }
 .header-option :hover{
-    background-color: lightblue;
+   
     padding: 0 30px;
     border-bottom: none;
     align-items: center;

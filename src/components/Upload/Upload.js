@@ -6,11 +6,12 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import NearMeIcon from '@mui/icons-material/NearMe';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { collection } from 'firebase/firestore';
+import { db } from '../../firebase.config';
 
-const Upload = ({profile,user,message,image}) => {
+const Upload = ({profile,user,message,image,date}) => {
   
     console.log(user,message)
-
 
 
 
@@ -19,10 +20,9 @@ const Upload = ({profile,user,message,image}) => {
         <div className='upload'>
                 <div className='upload-top'>
                    
-                {/* <Avatar src={profile} className='upload-avatar' />  */}
+                <Avatar src={profile} className='upload-avatar' /> 
                  <div className='upload-topInfo'>
                   <h3>{user}</h3>
-                  <p> Timestamp...   </p>
                  </div>
 
                  </div>
@@ -33,7 +33,7 @@ const Upload = ({profile,user,message,image}) => {
                   <div className="upload-image">
                       <img src={image} alt="" />
                   </div>
-                  
+                
                <div className='upload-options'>
                   <div className='upload-option'>
                        <ThumbUpIcon />
