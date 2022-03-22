@@ -11,9 +11,9 @@ const Home = () => {
          
             <Header></Header>
              <div className='app-body'>
-             <Sidebar></Sidebar>
-            <Story></Story>
-             <Widgets></Widgets>
+              <Sidebar></Sidebar>
+             <Story></Story>
+              <Widgets></Widgets>
 
              </div>
         </div>
